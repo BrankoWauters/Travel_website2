@@ -1,0 +1,13 @@
+extends layout
+
+block content
+	h1=title
+
+	ul
+		- book_list.sort(function(a, b) {let textA = a.title.toUpperCase(); let textB = b.title.toUpperCase(); return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;});
+		each country in country_list
+			li
+				a(href=country.url) #{country.name}
+					(#{country.startperiod}-#{country.endperiod})
+		else
+			li There are no countries that you can visit with us at the moment.
