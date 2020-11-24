@@ -1,11 +1,16 @@
-var Book = require('../models/country');
-var Author = require('../models/author');
-var Genre = require('../models/genre');
-var BookInstance = require('../models/bookinstance');
+var Country = require('../models/country');
+var City = require('../models/city');
 
 var async = require('async');
+
 exports.index = function (req, res) {
-}, function (err, results) {
-        res.render('index', { title: 'Vacations all planned for you', error: err, data: results });
-    });
+   res.render('index',{title: 'Shit website',error:err});
+    
 };
+
+//DISPLAY list of all countries
+exports.country_list = function(req,res,next){
+    res.send('NOT implemented: List of all countries');
+};
+    
+
